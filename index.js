@@ -71,10 +71,10 @@ function register() {
         icon: "success",
         title: "You're successfully sign up. Login now!!",
         showConfirmButton: false,
-        timer: 2500,
+        timer: 3000,
       }).then(() => {
         // Redirect to another page after the alert
-        window.location.href = "https://sachiofficial.github.io/Blogs.html"; // Replace "your-link-here" with the URL you want to redirect to
+        window.location.href = "https://sachicodex.github.io/next_music_login/"; // Replace "your-link-here" with the URL you want to redirect to
       });
     })
     .catch(function (error) {
@@ -128,7 +128,7 @@ function login() {
         icon: "success",
         title: "You are successfully login!",
         showConfirmButton: false,
-        timer: 1500,
+        timer: 2500,
       }).then(() => {
         // Redirect to another page after the alert
         window.location.href = "https://sachiofficial.github.io/Blogs.html"; // Replace "your-link-here" with the URL you want to redirect to
