@@ -46,13 +46,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
         <!-- Our stylesheet -->
         <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" href="popup.css">
+        <link rel="stylesheet" type="text/css" href="popup.css">
 
         
     </head>
     <body>
+
+        <div class="loading-page" id="loading-page">
+
+            <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+              
+              <path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+        
+            <div class="name-container">
+                <div class="logo-name">WELCOME</div>
+            </div>
+        </div>
+
+        <div class="cursor"></div>
+
         <div id="content_container">
             <div id="form_container">
                 <div id="form_header_container">
@@ -117,9 +132,26 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
+          <!--Loading screen-->
+
+          <script>
+            // Custom JavaScript function to hide the loader element
+            function hideLoader() {
+                // Get the loader element by its class or ID
+                const loader = document.querySelector('.loading-page');
+                // Set a timeout to hide the loader after 5 seconds (5000 milliseconds)
+                setTimeout(function () {
+                    loader.style.display = 'none';
+                }, 5000);
+            }
+        
+            // Call the hideLoader function when the page finishes loading
+            window.onload = hideLoader;
+        </script>
+
     <!-- Our script must be loaded after firebase references -->
     <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="popup.js"></script>
 
 
 </html>

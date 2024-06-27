@@ -5,7 +5,7 @@
   grid-template-columns: min-content auto min-content;
   padding: 1em;
   overflow-y: hidden;
-  background: #fff;
+  background: black;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.075), 0 1px 2px rgba(0, 0, 0, 0.075),
     1px 2px 4px rgba(0, 0, 0, 0.075), 1px 3px 8px rgba(0, 0, 0, 0.075),
     2px 4px 16px rgba(0, 0, 0, 0.075);
@@ -521,7 +521,7 @@ div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder {
 }
 div:where(.swal2-container) .swal2-range {
   margin: 1em 2em 3px;
-  background: #fff;
+  background: black;
 }
 div:where(.swal2-container) .swal2-range input {
   width: 80%;
@@ -566,7 +566,7 @@ div:where(.swal2-container) .swal2-radio,
 div:where(.swal2-container) .swal2-checkbox {
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: black;
   color: inherit;
 }
 div:where(.swal2-container) .swal2-radio label,

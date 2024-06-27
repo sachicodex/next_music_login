@@ -8,7 +8,12 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: none;
 
+}
+
+input{
+    cursor: none;
 }
 
 * {
@@ -17,6 +22,7 @@ html, body {
     box-sizing: border-box;
     border: none;
     outline: none;
+    cursor: none;
 }
 
 *::selection { background: none; color: rgb(0, 255, 72); }
@@ -27,6 +33,110 @@ a:active, button:active {
 }
 
 * {-webkit-tap-highlight-color: transparent;}
+
+/*-------------------- Cursor --------------------*/
+
+.cursor {
+
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff0000; 
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out, border-color 0.3s ease;
+    z-index: 9999; 
+  }
+  
+  .hovered {
+  
+    border-color: #00ff00; 
+  }
+  
+  
+  @media (max-width:768px){
+  
+    .cursor{
+    display: none;
+  
+    }
+  }
+  
+  .body-entier{
+  
+    cursor: none;
+  }
+  
+  .cursor-chatbot {
+  
+    cursor: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*-------------------- LOADER --------------------*/
+  
+  @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+  
+  .loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #000000, #191c1d, #06141a);
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: #191654;
+  }
+  
+  #svg {
+    height: 150px;
+    width: 150px;
+    stroke: white;
+    fill-opacity: 0;
+    stroke-width: 3px;
+    stroke-dasharray: 4500;
+    animation: draw 18s ease;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 4500;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .name-container {
+    height: 30px;
+    overflow: hidden;
+  }
+  
+  .logo-name {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-weight: bolder;
+    font-family: 'poppins';
+  }
+  
+  
+  
 
 p {
     font-size: 15px;
@@ -181,7 +291,7 @@ input[type="number"]::-webkit-inner-spin-button {
     color: inherit;
     letter-spacing: 1px;
     font-size: 14px;
-    cursor: pointer;
+    cursor: none;
     display: flex;
     justify-content: center;
     align-items: center;

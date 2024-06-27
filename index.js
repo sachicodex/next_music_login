@@ -190,3 +190,50 @@ function validate_field(field) {
     return true;
   }
 }
+
+// Select the cursor element
+const cursor = document.querySelector(".cursor");
+
+// Function to handle mouse movement
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = `${e.clientX}px`;
+  cursor.style.top = `${e.clientY}px`;
+  cursor.style.transform = "scale(1.2)"; // Slightly increase the size on move
+  cursor.style.opacity = "1"; // Ensure cursor is visible
+});
+
+// Function to handle mouse down
+document.addEventListener("mousedown", () => {
+  cursor.style.transform = "scale(0.8)"; // Shrink cursor on click
+});
+
+// Function to handle mouse up
+document.addEventListener("mouseup", () => {
+  cursor.style.transform = "scale(1.2)"; // Restore cursor size on release
+});
+
+// List of elements to change cursor color on hover
+const hoverElements = document.querySelectorAll(
+  "button, a, li, input, textarea, select, .profile, .about-text h5, .fa-brands"
+);
+
+// Function to handle mouse enter
+hoverElements.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursor.classList.add("hovered"); // Add class on hover
+  });
+
+  el.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hovered"); // Remove class when not hovering
+  });
+});
+
+// Function to handle mouse leaving the window
+document.addEventListener("mouseleave", () => {
+  cursor.style.opacity = "0"; // Hide the cursor when it leaves the window
+});
+
+// Function to handle mouse entering the window
+document.addEventListener("mouseenter", () => {
+  cursor.style.opacity = "1"; // Show the cursor when it enters the window
+});
