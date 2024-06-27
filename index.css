@@ -18,6 +18,16 @@ html, body {
     border: none;
     outline: none;
 }
+
+*::selection { background: none; color: rgb(0, 255, 72); }
+
+a:active, button:active {
+  background-color: initial;
+
+}
+
+* {-webkit-tap-highlight-color: transparent;}
+
 p {
     font-size: 15px;
     letter-spacing: 1px;
