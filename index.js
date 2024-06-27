@@ -21,12 +21,21 @@ function register() {
   contact_number = document.getElementById("contact_number").value;
   country_of_region = document.getElementById("country_of_region ").value;
 
+  // Function to clear input fields
+  function clearInputFields() {
+    document.getElementById("full_name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("contact_number").value = "";
+    document.getElementById("country_of_region").value = "";
+  }
+
   // Validate input fields
   if (validate_email(email) == false || validate_password(password) == false) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Email or Password is Outta Line!!",
+      text: "Please enter email and password!",
     });
     return;
     // Don't continue running the code
@@ -67,15 +76,17 @@ function register() {
       database_ref.child("users/" + user.uid).set(user_data);
 
       // DOne
+      // Show success message and reset input fields
       Swal.fire({
         icon: "success",
-        title: "You're successfully sign up. Login now!!",
-        showConfirmButton: false,
-        timer: 3000,
+        title: "You're successfully signed up. Login now!!",
+        showConfirmButton: true,
       }).then(() => {
-        // Redirect to another page after the alert
-        window.location.href =
-          "https://sachicodex.github.io/next_music_login/login.html"; // Replace "your-link-here" with the URL you want to redirect to
+        document.getElementById("button_login").style.display = "block";
+        document.getElementById("button_signup").style.display = "none";
+        document.getElementById("form_header").innerHTML = "Login your account";
+        // Clear the input fields
+        clearInputFields();
       });
     })
     .catch(function (error) {

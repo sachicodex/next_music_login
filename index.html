@@ -48,7 +48,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
         <!-- Our stylesheet -->
         <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <link rel="stylesheet" href="popup.css">
 
         
     </head>
@@ -78,12 +78,31 @@
                         <label for="name">Country Of Region </label>
                         <input type="text" id="country_of_region ">
 
+
+
+
+                        <div id="button_signup">
                         <div id="button_container" class="signup">
                             <button onclick="register()">Sign up</button>
+
                         </div>
                         <div id="button_container" class="login">
-                            <button onclick="window.open(url='https://sachicodex.github.io/next_music_login/login.html')">Alredy have an account</button>
+                            <button onclick="document.getElementById('button_signup').style.display='none', document.getElementById('button_login').style.display='block', document.getElementById('form_header').innerHTML='Login your account'">Alredy have an account</button>
                         </div>
+                        </div>
+
+
+
+
+                        <div id="button_login">
+                        <div id="button_container" class="signup">
+                            <button onclick="login()">Login now</button>
+                        </div>
+                        
+                        <div id="button_container" class="login">
+                            <button onclick="document.getElementById('button_login').style.display='none', document.getElementById('button_signup').style.display='block', document.getElementById('form_header').innerHTML='Create an account'">Haven't account yet</button>
+                        </div>
+                    </div>
 
                     </div>
                 </div>
