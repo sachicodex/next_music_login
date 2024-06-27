@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- MetaData -->
+
+  <title>Home &raquo; Sachintha Lakshan</title>
+  <meta name="title" content="Sachintha Lakshan">
+
+  <!-- Discription -->
+
+  <meta name="description"
+    content="Sachintha Lakshan's official website is being updated to provide visitors with the latest information, exciting features, and a user-friendly experience.">
+  <meta property="og:title" content="Sachintha Lakshan">
+  <meta name="description" content="Official website of Sachintha Lakshan, a versatile web developer, YouTuber, and content creator. Discover my projects, blogs, and music.">
+  <meta name="keywords" content="Sachintha Lakshan, web developer, YouTuber, content creator, web development, tech blogs, Sri Lanka, creative content">
+  <meta property="og:image" content="https://sachicodex.github.io/Home%20Pages/images/Tab%20Logo/share_icon.png">
+  
+
+  <!-- Icons -->
+
+  <link rel="apple-touch-icon" sizes="180x180"  href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"  href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"  href="img/favicon-16x16.png">
+  <link rel="manifest"  href="img/site.webmanifest">
+
+    <!-- Themes -->
+
+    <meta name = “theme-color” content = “#000000”>
+    <meta content='#000000' name='theme-color'/> 
+    <meta name = "msapplication-navbutton-color" content = "#000000">
+    <meta content='#000000' name='msapplication-navbutton-color'/>
+    <meta name = "apple-mobile-web-app-capable" content = "yes">
+    <meta name = "apple-mobile-web-app-status-bar-style" content = "black or black-translucent">
+    <meta content=’yes’ name=’apple-mobile-web-app-capable’/>
+    <meta content=’black-translucent’ name=’apple-mobile-web-app-status-bar-style’/>
+
+
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+        
+    </head>
+    <body>
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header"> Create an account </h2>
+                </div>
+                <p>Let's get started!</p>
+<br>
+                <div id="form_content_container">
+                    <div id="form_content_inner_container">
+
+                        <label for="name">Full Name</label>
+                        <input type="text" id="full_name">
+
+                        <label for="name">Email</label>
+                        <input type="email" id="email" >
+
+                        <label for="name">Password</label>
+                        <input type="password" id="password">
+
+                        <label for="number">Contact Number</label>
+                        <input type="number" id="contact_number">
+
+                        <label for="name">Country Of Region </label>
+                        <input type="text" id="country_of_region ">
+
+                        <div id="button_container" class="signup">
+                            <button onclick="register()">Sign up</button>
+                        </div>
+                        <div id="button_container" class="login">
+                            <button onclick="window.open(url='https://sachiofficial.github.io/Blogs.html')">Alredy have an account</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</html>
