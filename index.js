@@ -74,7 +74,8 @@ function register() {
         timer: 3000,
       }).then(() => {
         // Redirect to another page after the alert
-        window.location.href = "https://sachicodex.github.io/next_music_login/"; // Replace "your-link-here" with the URL you want to redirect to
+        window.location.href =
+          "https://sachicodex.github.io/next_music_login/login.html"; // Replace "your-link-here" with the URL you want to redirect to
       });
     })
     .catch(function (error) {
