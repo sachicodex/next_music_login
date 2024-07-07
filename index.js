@@ -27,19 +27,9 @@ function register() {
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
     document.getElementById("contact_number").value = "";
-    document.getElementById("country_of_region").value = "";
+    document.getElementById("country_of_region ").value = "";
   }
 
-  // Validate input fields
-  if (validate_email(email) == false || validate_password(password) == false) {
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Please enter email and password!",
-    });
-    return;
-    // Don't continue running the code
-  }
   if (
     validate_field(full_name) == false ||
     validate_field(contact_number) == false ||
@@ -48,9 +38,20 @@ function register() {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "One or More Extra Fields is Outta Line!!",
+      text: "Please Complete All Fields!",
     });
     return;
+  }
+
+  // Validate input fields
+  if (validate_email(email) == false || validate_password(password) == false) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please Enter Email & Password!",
+    });
+    return;
+    // Don't continue running the code
   }
 
   // Move on with Auth
@@ -79,7 +80,7 @@ function register() {
       // Show success message and reset input fields
       Swal.fire({
         icon: "success",
-        title: "You're successfully signed up. Login now!!",
+        title: "You Have Successfully Registered. Log In Now!!",
         showConfirmButton: true,
       }).then(() => {
         document.getElementById("button_login").style.display = "block";
@@ -112,7 +113,7 @@ function login() {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Email or Password is wrong!!",
+      text: "Please Enter Your Details!",
     });
     return;
     // Don't continue running the code
@@ -138,12 +139,12 @@ function login() {
       // DOne
       Swal.fire({
         icon: "success",
-        title: "You are successfully login!",
+        title: "You Are Successfully Login!",
         showConfirmButton: false,
         timer: 2500,
       }).then(() => {
         // Redirect to another page after the alert
-        window.location.href = "https://sachiofficial.github.io/Blogs.html"; // Replace "your-link-here" with the URL you want to redirect to
+        window.location.href = "https://bit.ly/Next-Music-Download"; // Replace "your-link-here" with the URL you want to redirect to
       });
     })
     .catch(function (error) {
@@ -153,7 +154,7 @@ function login() {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: error_message,
+        text: "Email or Password Is Wrong!",
       });
     });
 }
@@ -237,3 +238,68 @@ document.addEventListener("mouseleave", () => {
 document.addEventListener("mouseenter", () => {
   cursor.style.opacity = "1"; // Show the cursor when it enters the window
 });
+
+// Function to clear input fields
+function clearInputFields() {
+  setTimeout(() => {
+    document.getElementById("full_name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("contact_number").value = "";
+    document.getElementById("country_of_region ").value = "";
+  }, 1500);
+}
+
+function handleLogin() {
+  // Define screen breakpoints
+  const isMobile = window.innerWidth <= 768; // Mobile: screens <= 768px
+  const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024; // Tablet: screens between 769px and 1024px
+
+  // Set translate value based on screen size
+  let translateValue = "translateX(-40dvw)"; // Default for larger screens
+
+  if (isMobile) {
+    translateValue = "translateX(-100dvw)";
+  } else if (isTablet) {
+    translateValue = "translateX(-60dvw)";
+  }
+
+  // Initial transformation
+  document.getElementById("content_container").style.transform = translateValue;
+
+  // Delay the transformation and other changes by 1.5 seconds
+  setTimeout(function () {
+    document.getElementById("button_signup").style.display = "none";
+    document.getElementById("button_login").style.display = "block";
+    document.getElementById("form_header").innerHTML = "Login your account";
+    document.getElementById("content_container").style.transform =
+      "translateX(0dvw)";
+  }, 1500);
+}
+
+function showSignupForm() {
+  // Define screen breakpoints
+  const isMobile = window.innerWidth <= 768; // Mobile: screens <= 768px
+  const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024; // Tablet: screens between 769px and 1024px
+
+  // Set translate value based on screen size
+  let translateValue = "translateX(-40dvw)"; // Default for larger screens
+
+  if (isMobile) {
+    translateValue = "translateX(-100dvw)";
+  } else if (isTablet) {
+    translateValue = "translateX(-60dvw)";
+  }
+
+  // Initial transformation
+  document.getElementById("content_container").style.transform = translateValue;
+
+  // Delay the transformation and other changes by 1.5 seconds
+  setTimeout(function () {
+    document.getElementById("button_login").style.display = "none";
+    document.getElementById("button_signup").style.display = "block";
+    document.getElementById("form_header").innerHTML = "Create an account";
+    document.getElementById("content_container").style.transform =
+      "translateX(0dvw)";
+  }, 1500);
+}

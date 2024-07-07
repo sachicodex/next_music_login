@@ -12,6 +12,8 @@ html, body {
 
 }
 
+::-webkit-scrollbar { display: none; }
+
 input{
     cursor: none;
 }
@@ -154,6 +156,7 @@ p {
     height: 100dvh;
     float: left;
     margin-left: -5px;
+    transition: transform 2s;
     
 }
 
@@ -166,7 +169,8 @@ p {
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.679);
     border-radius: 2%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #form_header_container {
@@ -226,6 +230,7 @@ label {
     background-color: #1a1734;
     padding-left: 7px;
     padding-right: 7px;
+    border-radius: 30px;
 }
 
 input {

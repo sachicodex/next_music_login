@@ -71,9 +71,9 @@
         <div id="content_container">
             <div id="form_container">
                 <div id="form_header_container">
-                    <h2 id="form_header"> Create an account </h2>
+                    <h2 id="form_header" style="margin-top: 70px;"> Create an account </h2>
                 </div>
-                <p>Let's get started!</p>
+                <p style="margin-top: 90px;">Let's get started!</p>
 <br>
                 <div id="form_content_container">
                     <div id="form_content_inner_container">
@@ -102,7 +102,7 @@
 
                         </div>
                         <div id="button_container" class="login">
-                            <button onclick="document.getElementById('button_signup').style.display='none', document.getElementById('button_login').style.display='block', document.getElementById('form_header').innerHTML='Login your account'">Alredy have an account</button>
+                            <button onclick="handleLogin() ,clearInputFields()">Alredy have an account</button>
                         </div>
                         </div>
 
@@ -115,7 +115,7 @@
                         </div>
                         
                         <div id="button_container" class="login">
-                            <button onclick="document.getElementById('button_login').style.display='none', document.getElementById('button_signup').style.display='block', document.getElementById('form_header').innerHTML='Create an account'">Haven't account yet</button>
+                            <button onclick="showSignupForm() ,clearInputFields()">Haven't account yet</button>
                         </div>
                     </div>
 
