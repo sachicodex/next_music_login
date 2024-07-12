@@ -144,7 +144,7 @@ function login() {
         timer: 2500,
       }).then(() => {
         // Redirect to another page after the alert
-        window.location.href = "https://bit.ly/Next-Music-Download"; // Replace "your-link-here" with the URL you want to redirect to
+        window.location.href = "https://bit.ly/next-music-download"; // Replace "your-link-here" with the URL you want to redirect to
       });
     })
     .catch(function (error) {
